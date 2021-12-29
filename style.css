@@ -1,0 +1,139 @@
+/*buscar a fonte no google fonts, importar. copiar o que está dentro de style*/
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap");
+
+/*criando um reset css para deletar as configurações pré definidas*/
+/*coloco um * que seleciona todas as tags do documento html*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/*margin é a distância entre a tag que estou usando para a exterior (espaço entre o risco e o texto acima)
+padding é a distância da tag para o conteúdo dela (espaço entre o risco e o texto abaixo)
+box sizing
+text decoration none é para tirar toda decoração que houver no texto
+*/
+
+/*reset para o corpo do texto:*/
+body {
+  font-size: 100%;
+  background: linear-gradient(68.15deg, #2f2325 16.62%, #8e5d52 85.61%);
+}
+
+/*agora faço a seleção de classes usando . e o nome da classe que eu quero estilizar*/
+/*uso a  propriedade display: flex para usar o flexbox. Verifico se as mudanças que eu quero são da tag pai ou filho, pois são propriedades diferentes. A partir daí eu vejo o que eu quero fazer: colocar na horizontal, vertical etc*/
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24px;
+}
+
+.cabecalho-imagem {
+  height: 72px;
+}
+
+.cabecalho-menu {
+  display: flex;
+  gap: 32px;
+}
+
+/*os detalhes do texto eu pego no Figma. Clico na letra e inspect - */
+.cabecalho-menu-item {
+  font-family: "Sarala", sans-serif;
+  color: #fff2e7;
+  font-weight: 400;
+  font-size: 18px;
+}
+.conteudo {
+  margin-bottom: 48px;
+  border-top: 0.4px solid #fff2e7;
+}
+
+.conteudo-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.conteudo-principal-escrito-titulo {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 64px;
+  color: #fff2e7;
+}
+
+.conteudo-principal-escrito-subtitulo {
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ECD6C4;
+}
+
+.conteudo-principal-escrito-botao {
+  background-color:#ECD6C4;
+  width: 180px;
+  height: 60px;
+  border: none;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #2F2325;
+}
+
+/*para mudar a cor do botão quando se pass o mouse por cima, é a pseudo-classe hover. repito a classe e adiciono a pseudo-classe*/
+.conteudo-principal-escrito-botao:hover {
+  background-color: rgba(236, 214, 196, 0.53);
+}
+
+.conteudo-principal-imagem {
+  height: 430px;
+}
+
+.conteudo-secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.conteudo-secundario-titulo {
+  border-top: 0.4px solid #fff2e7;
+  padding-top: 48px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff2ef;
+  margin-bottom: 16px;
+}
+
+.conteudo-secundario-paragrafo {
+  font-family: 'sarala', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #ECD6C4;
+}
+
+.rodape {
+  padding: 32px;
+  border-top: 0.4px solid #fff2e7;
+}
+
+/*para centralizar apenas um elemento, eu posso usar o display block (não preciso usar o flex box). O display block vai colocar o elemento em bloco, ou seja, vai utilizar todo o espaço dentro daquele elemento. E margin 0 auto para automaticamente colocar também para os lados   */
+.rodape-imagem {
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+}
